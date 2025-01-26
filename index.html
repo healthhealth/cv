@@ -5,299 +5,279 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículo - Dr. Gustavo Mendes e Silva</title>
-    <link rel="stylesheet" href="curriculo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
- <title>Currículo Médico Rel.</title> 
-  <style>
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
+    <style>
+        /* --- RESET --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.container {
-    max-width: 800px;
-    margin: 30px auto;
-    background-color: #fff;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
+        /* --- GERAL --- */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
 
-.header {
-    background-color: #0d47a1;
-    color: #fff;
-    padding: 20px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    text-align: center;
-}
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
 
-.title {
-    margin: 0;
-    font-size: 2.5em;
-}
+        .header {
+            background-color: #0d47a1;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
 
-.subtitle {
-    margin: 5px 0 15px 0;
-    font-size: 1.2em;
-    font-weight: normal;
-}
+        .title {
+            margin: 0;
+            font-size: 2.2em;
+            font-weight: bold;
+        }
 
-.contact-info {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-    font-size: 0.9em;
-}
+        .subtitle {
+            margin: 5px 0 15px 0;
+            font-size: 1.1em;
+            font-weight: normal;
+        }
 
-.contact-info div {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            font-size: 0.9em;
+        }
 
-.content {
-    padding: 20px;
-}
+        .contact-info div {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
 
-.section {
-    margin-bottom: 30px;
-}
+        .content {
+            padding: 20px;
+        }
 
-.section-title {
-    background-color: #eee;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+        .section {
+            margin-bottom: 30px;
+        }
 
-.section-title i {
-    color: #0d47a1;
-}
+        .section-title {
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
 
-.experience,
-.education,
-.international-experience {
-    display: grid;
-    gap: 20px;
-}
+        .section-title i {
+            color: #0d47a1;
+            margin-right: 10px;
+        }
 
-.experience-item,
-.education-item,
-.international-experience-item {
-    background-color: #f8f8f8;
-    padding: 15px;
-    border-radius: 5px;
-}
+        .experience-item,
+        .education-item,
+        .international-experience-item {
+            margin-bottom: 20px;
+        }
 
-.experience-title,
-.education-institution,
-.international-experience-title {
-    margin: 0 0 5px 0;
-    color: #0d47a1;
-}
+        .experience-title,
+        .education-institution,
+        .international-experience-title {
+            margin: 0 0 5px 0;
+            color: #0d47a1;
+            font-weight: 600;
+        }
 
-.experience-period {
-    margin-bottom: 10px;
-    font-size: 0.9em;
-    color: #555;
-}
+        .experience-period,
+        .education-period,
+        .international-experience-period {
+            margin-bottom: 10px;
+            font-size: 0.9em;
+            color: #555;
+        }
 
-.experience-details,
-.education-details,
-.international-experience-details {
-    list-style-type: disc;
-    margin-left: 20px;
-    font-size: 0.9em;
-    color: #444;
-}
+        .experience-details,
+        .education-details,
+        .international-experience-details {
+            list-style-type: disc;
+            margin-left: 20px;
+            font-size: 0.9em;
+            color: #444;
+        }
 
-.education-level {
-    margin-top: 20px;
-    color: #0d47a1;
-}
+        .education-level {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #0d47a1;
+            font-weight: 600;
+        }
 
-.skills {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-}
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
 
-.skill {
-    background-color: #f8f8f8;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 0.9em;
-    color: #444;
-}
+        .skill {
+            background-color: #f8f8f8;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            color: #444;
+            flex-grow: 1;
+        }
 
-.certifications {
-    list-style-type: disc;
-    margin-left: 20px;
-    font-size: 0.9em;
-    color: #444;
-}
+        .certifications {
+            list-style-type: disc;
+            margin-left: 20px;
+            font-size: 0.9em;
+            color: #444;
+        }
 
-.languages {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 15px;
-}
+        .languages {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
 
-.language {
-    background-color: #f8f8f8;
-    padding: 15px;
-    border-radius: 5px;
-    text-align: center;
-}
+        .language {
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            flex-grow: 1;
+        }
 
-.language-name {
-    margin: 0 0 5px 0;
-    color: #0d47a1;
-}
+        .language-name {
+            margin: 0 0 5px 0;
+            color: #0d47a1;
+            font-weight: 600;
+        }
 
-.language-level {
-    font-size: 0.9em;
-    color: #555;
-}
+        .language-level {
+            font-size: 0.9em;
+            color: #555;
+        }
 
-      @media print {
-  /* Basic page setup */
-  @page {
-    size: A4;
-    margin: 1.5cm;
-  }
+        /* --- ATS --- */
+        .section-title {
+            text-transform: uppercase;
+        }
 
-  body {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-    color-adjust: exact !important;
-    background: white !important;
-    font-size: 11pt;
-    line-height: 1.3;
-    color: black !important;
-  }
+        /* --- PDF --- */
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
 
-  /* Container adjustments */
-  .container {
-    width: 100% !important;
-    max-width: none;
-    margin: 0;
-    padding: 0;
-    box-shadow: none;
-    border: none;
-  }
+            body {
+                font-size: 10pt;
+            }
 
-  /* Header section */
-  .header {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-    background-color: #0d47a1 !important;
-    color: white !important;
-    padding: 15px;
-    break-after: avoid;
-  }
+            .container {
+                box-shadow: none;
+                margin: 0;
+                padding: 0;
+            }
 
-  .title {
-    color: white !important;
-    font-size: 24pt;
-    margin-bottom: 5px;
-  }
+            .header {
+                padding: 15px;
+            }
 
-  .subtitle {
-    color: white !important;
-    font-size: 14pt;
-  }
+            .title {
+                font-size: 1.8em;
+            }
 
-  /* Contact info adjustments */
-  .contact-info {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 10px 0;
-  }
+            .subtitle {
+                font-size: 1em;
+            }
 
-  .contact-info div {
-    flex: 0 0 auto;
-    margin-right: 20px;
-    white-space: nowrap;
-  }
+            .contact-info {
+                font-size: 0.8em;
+            }
 
-  /* Section formatting */
-  .section {
-    margin: 15px 0;
-    break-inside: avoid;
-  }
+            .content {
+                padding: 15px;
+            }
 
-  .section-title {
-    color: #0d47a1 !important;
-    font-size: 14pt;
-    margin: 15px 0 10px;
-    padding: 0;
-    background: none;
-  }
+            .section {
+                page-break-inside: avoid;
+                margin-bottom: 20px;
+            }
 
-  /* Content spacing */
-  .experience-item,
-  .education-item,
-  .international-experience-item {
-    break-inside: avoid;
-    margin-bottom: 10px;
-    background: none;
-    padding: 0;
-  }
+            .section-title {
+                padding: 8px;
+                margin-bottom: 10px;
+            }
 
-  /* Hide decorative elements */
-  .fa-solid,
-  .fa-brands {
-    display: none;
-  }
+            .experience-item,
+            .education-item,
+            .international-experience-item {
+                margin-bottom: 15px;
+            }
 
-  /* Skills grid optimization */
-  .skills {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-  }
+            .experience-details,
+            .education-details,
+            .international-experience-details {
+                font-size: 0.8em;
+            }
 
-  .skill {
-    background: none;
-    padding: 4px 0;
-    border-bottom: 1px solid #eee;
-  }
+            .education-level {
+                margin-top: 15px;
+                margin-bottom: 8px;
+            }
 
-  /* Languages section */
-  .languages {
-    display: flex;
-    gap: 20px;
-  }
+            .skills {
+                gap: 8px;
+            }
 
-  .language {
-    background: none;
-    padding: 0;
-  }
+            .skill {
+                padding: 8px;
+                font-size: 0.8em;
+            }
 
-  /* Avoid orphans and widows */
-  p, li {
-    orphans: 3;
-    widows: 3;
-  }
-}
+            .certifications {
+                font-size: 0.8em;
+            }
 
-/* Add page breaks */
-@media print {
-  .section:not(:last-child) {
-    break-after: always;
-  }
-}
+            .languages {
+                gap: 10px;
+            }
 
-  </style>
+            .language {
+                padding: 10px;
+            }
+
+            .language-level {
+                font-size: 0.8em;
+            }
+
+            .fa-solid,
+            .fa-brands {
+                display: none;
+            }
+        }
+
+        /* --- PAGE BREAK --- */
+        @media print {
+            .section:not(:last-child) {
+                page-break-after: always;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <div class="container">
         <div class="header">
@@ -312,153 +292,177 @@ body {
             </div>
         </div>
 
-    <div class="content">
+        <div class="content">
             <div class="section">
                 <h2 class="section-title"><i class="fa-solid fa-user-tie"></i> Objetivo Profissional</h2>
                 <p>
-                    Contribuir para a área de Relacionamento Médico da SulAmérica, aplicando minha sólida experiência clínica, expertise em análise técnica e paixão por inovação em saúde para fortalecer o relacionamento com profissionais e instituições de saúde, além de impulsionar o sucesso da empresa e aprimorar a qualidade do atendimento aos beneficiários.
+                    Contribuir para a área de Relacionamento Médico da SulAmérica, aplicando minha sólida experiência
+                    clínica, expertise em análise técnica e paixão por inovação em saúde para fortalecer o
+                    relacionamento com profissionais e instituições de saúde, além de impulsionar o sucesso da empresa
+                    e aprimorar a qualidade do atendimento aos beneficiários.
                 </p>
             </div>
 
             <div class="section">
                 <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> Experiência Profissional</h2>
-                <div class="experience">
-                    <div class="experience-item">
-                        <h3 class="experience-title">Médico Interlocutor de Rede e Responsável Técnico</h3>
-                        <p class="experience-period">Associação Saúde da Família | 2022 - 2023</p>
-                        <ul class="experience-details">
-                            <li>Análise de diversos casos complexos, fornecendo pareceres técnicos que resultaram em uma otimização do tempo de resolução e na melhoria da satisfação dos pacientes.</li>
-                            <li>Elaboração e implementação de protocolos assistenciais baseados em evidências, com foco em otimização de recursos e melhoria da qualidade do atendimento.</li>
-                            <li>Coordenação de comitês técnicos para avaliação de casos e desenvolvimento de diretrizes, promovendo a integração entre as equipes e a adoção de melhores práticas.</li>
-                            <li>Desenvolvimento de documentação técnica e relatórios especializados, assegurando a conformidade com as normas regulatórias e a transparência dos processos.</li>
-                            <li>Supervisão de processos assistenciais e interface com órgãos reguladores, garantindo a qualidade e a segurança dos serviços prestados.</li>
-                            <li>Experiência em gestão de rede credenciada, negociação com prestadores e controle de custos assistenciais, habilidades essenciais para a otimização da rede de atendimento da SulAmérica.</li>
-                            <li>Responsabilidade técnica com foco em compliance e excelência operacional, alinhado aos valores e padrões de qualidade da SulAmérica.</li>
-                        </ul>
-                    </div>
+                <div class="experience-item">
+                    <h3 class="experience-title">Médico Interlocutor de Rede e Responsável Técnico</h3>
+                    <p class="experience-period">Associação Saúde da Família | 2022 - 2023</p>
+                    <ul class="experience-details">
+                        <li>Análise de diversos casos complexos, fornecendo pareceres técnicos que resultaram em uma
+                            otimização do tempo de resolução e na melhoria da satisfação dos pacientes.</li>
+                        <li>Elaboração e implementação de protocolos assistenciais baseados em evidências, com foco em
+                            otimização de recursos e melhoria da qualidade do atendimento.</li>
+                        <li>Coordenação de comitês técnicos para avaliação de casos e desenvolvimento de diretrizes,
+                            promovendo a integração entre as equipes e a adoção de melhores práticas.</li>
+                        <li>Desenvolvimento de documentação técnica e relatórios especializados, assegurando a
+                            conformidade com as normas regulatórias e a transparência dos processos.</li>
+                        <li>Supervisão de processos assistenciais e interface com órgãos reguladores, garantindo a
+                            qualidade e a segurança dos serviços prestados.</li>
+                        <li>Experiência em gestão de rede credenciada, negociação com prestadores e controle de custos
+                            assistenciais, habilidades essenciais para a otimização da rede de atendimento da SulAmérica.
+                        </li>
+                        <li>Responsabilidade técnica com foco em compliance e excelência operacional, alinhado aos
+                            valores e padrões de qualidade da SulAmérica.</li>
+                    </ul>
+                </div>
 
-                    <div class="experience-item">
-                        <h3 class="experience-title">Médico Diarista</h3>
-                        <p class="experience-period">Hospital Psiquiátrico Cantareira - SPDM | 2021 - 2022</p>
-                        <ul class="experience-details">
-                            <li>Desenvolvimento de protocolos e fluxos assistenciais, contribuindo para a padronização e a eficiência do atendimento.</li>
-                            <li>Participação em comissões técnicas e análise de casos complexos, demonstrando capacidade de avaliação crítica e tomada de decisão embasada em evidências.</li>
-                            <li>Elaboração de pareceres e documentação técnica especializada, com foco na clareza, precisão e objetividade da comunicação.</li>
-                            <li>Interface com equipes multidisciplinares e gestão assistencial, aprimorando a capacidade de trabalho em equipe e a coordenação de cuidados.</li>
-                        </ul>
-                    </div>
+                <div class="experience-item">
+                    <h3 class="experience-title">Médico Diarista</h3>
+                    <p class="experience-period">Hospital Psiquiátrico Cantareira - SPDM | 2021 - 2022</p>
+                    <ul class="experience-details">
+                        <li>Desenvolvimento de protocolos e fluxos assistenciais, contribuindo para a padronização e a
+                            eficiência do atendimento.</li>
+                        <li>Participação em comissões técnicas e análise de casos complexos, demonstrando capacidade de
+                            avaliação crítica e tomada de decisão embasada em evidências.</li>
+                        <li>Elaboração de pareceres e documentação técnica especializada, com foco na clareza, precisão
+                            e objetividade da comunicação.</li>
+                        <li>Interface com equipes multidisciplinares e gestão assistencial, aprimorando a capacidade de
+                            trabalho em equipe e a coordenação de cuidados.</li>
+                    </ul>
+                </div>
 
-                    <div class="experience-item">
-                        <h3 class="experience-title">Médico Psiquiatra</h3>
-                        <p class="experience-period">CAPS II Jaçanã Tremembé | Outubro 2024 - Atual</p>
-                        <ul class="experience-details">
-                            <li>Análise técnica e elaboração de pareceres especializados, com foco em avaliação de risco, definição de condutas e orientação a pacientes e familiares.</li>
-                            <li>Desenvolvimento de planos terapêuticos multidisciplinares, integrando diferentes abordagens terapêuticas para a otimização do cuidado.</li>
-                            <li>Participação em comitês de análise de casos complexos, contribuindo para a construção de soluções inovadoras e centradas no paciente.</li>
-                        </ul>
-                    </div>
+                <div class="experience-item">
+                    <h3 class="experience-title">Médico Psiquiatra</h3>
+                    <p class="experience-period">CAPS II Jaçanã Tremembé | Outubro 2024 - Atual</p>
+                    <ul class="experience-details">
+                        <li>Análise técnica e elaboração de pareceres especializados, com foco em avaliação de risco,
+                            definição de condutas e orientação a pacientes e familiares.</li>
+                        <li>Desenvolvimento de planos terapêuticos multidisciplinares, integrando diferentes abordagens
+                            terapêuticas para a otimização do cuidado.</li>
+                        <li>Participação em comitês de análise de casos complexos, contribuindo para a construção de
+                            soluções inovadoras e centradas no paciente.</li>
+                    </ul>
                 </div>
             </div>
 
             <div class="section">
                 <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Formação Acadêmica</h2>
-                <div class="education">
-                    <h3 class="education-level">Pós-Graduação e MBA</h3>
-                    <div class="education-item">
-                        <h4 class="education-institution">MBA em Gestão, Inovação e Serviços em Saúde - PUC-RS | 2024</h4>
-                        <ul class="education-details">
-                            <li>Foco em regulação em saúde suplementar, gestão da qualidade assistencial e auditoria em saúde, com módulos específicos sobre inovação no setor de seguros de saúde e estratégias de acesso ao mercado, conhecimentos diretamente aplicáveis à SulAmérica.</li>
-                            <li>Desenvolvimento de competências em gestão de operadoras de planos de saúde, análise de custos e otimização de processos, essenciais para a atuação em Relacionamento Médico na SulAmérica.</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="education-item">
-                        <h4 class="education-institution">MIT MicroMasters in Digital Transformation (Em andamento)</h4>
-                        <ul class="education-details">
-                            <li>Digital Transformation Strategy</li>
-                            <li>Healthcare Process Innovation</li>
-                            <li>Leadership in Healthcare Organizations</li>
-                        </ul>
-                    </div>
-
-                    <div class="education-item">
-                        <h4 class="education-institution">MBA em Health Tech - FIAP (Em andamento)</h4>
-                        <ul class="education-details">
-                            <li>Gestão de Processos Assistenciais</li>
-                            <li>Inovação em Saúde</li>
-                            <li>Análise de Dados em Saúde</li>
-                        </ul>
-                    </div>
-
-                    <div class="education-item">
-                        <h4 class="education-institution">Especialização em Tecnologia e Dados em Saúde - PUC-PR | 2024
-                        </h4>
-                        <ul class="education-details">
-                            <li>Gestão de Processos em Saúde</li>
-                            <li>Análise de Indicadores Assistenciais</li>
-                        </ul>
-                    </div>
+                <h3 class="education-level">Pós-Graduação e MBA</h3>
+                <div class="education-item">
+                    <h4 class="education-institution">MBA em Gestão, Inovação e Serviços em Saúde</h4>
+                    <p class="education-period">PUC-RS | 2024</p>
+                    <ul class="education-details">
+                        <li>Foco em regulação em saúde suplementar, gestão da qualidade assistencial e auditoria em
+                            saúde, com módulos específicos sobre inovação no setor de seguros de saúde e estratégias de
+                            acesso ao mercado, conhecimentos diretamente aplicáveis à SulAmérica.</li>
+                        <li>Desenvolvimento de competências em gestão de operadoras de planos de saúde, análise de custos
+                            e otimização de processos, essenciais para a atuação em Relacionamento Médico na SulAmérica.
+                        </li>
+                    </ul>
                 </div>
 
-                <div class="education">
-                    <h3 class="education-level">Especializações Clínicas</h3>
-                    <div class="education-item">
-                        <h4 class="education-institution">Psiquiatria - FGMED | 2024 | 492 horas</h4>
-                        <ul class="education-details">
-                            <li>Análise Crítica de Evidências</li>
-                            <li>Elaboração de Documentação Técnica</li>
-                        </ul>
-                    </div>
-
-                    <div class="education-item">
-                        <h4 class="education-institution">Cuidados Paliativos</h4>
-                        <ul class="education-details">
-                            <li>MJHS Institute for Innovation in Palliative Care | 2024</li>
-                            <li>University of Colorado System Palliative Care Program | 2024</li>
-                        </ul>
-                    </div>
+                <div class="education-item">
+                    <h4 class="education-institution">MIT MicroMasters in Digital Transformation (Em andamento)</h4>
+                    <ul class="education-details">
+                        <li>Digital Transformation Strategy</li>
+                        <li>Healthcare Process Innovation</li>
+                        <li>Leadership in Healthcare Organizations</li>
+                    </ul>
                 </div>
 
-                <div class="education">
-                    <h3 class="education-level">Graduação</h3>
-                    <div class="education-item">
-                        <h4 class="education-institution">Medicina - FAMEMA | 2020</h4>
-                        <ul class="education-details">
-                            <li>Nota 5 ENADE</li>
-                            <li>Metodologia PBL (Problem-Based Learning)</li>
-                        </ul>
-                    </div>
+                <div class="education-item">
+                    <h4 class="education-institution">MBA em Health Tech (Em andamento)</h4>
+                    <p class="education-period">FIAP</p>
+                    <ul class="education-details">
+                        <li>Gestão de Processos Assistenciais</li>
+                        <li>Inovação em Saúde</li>
+                        <li>Análise de Dados em Saúde</li>
+                    </ul>
+                </div>
+
+                <div class="education-item">
+                    <h4 class="education-institution">Especialização em Tecnologia e Dados em Saúde</h4>
+                    <p class="education-period">PUC-PR | 2024</p>
+                    <ul class="education-details">
+                        <li>Gestão de Processos em Saúde</li>
+                        <li>Análise de Indicadores Assistenciais</li>
+                    </ul>
+                </div>
+
+                <h3 class="education-level">Especializações Clínicas</h3>
+                <div class="education-item">
+                    <h4 class="education-institution">Psiquiatria</h4>
+                    <p class="education-period">FGMED | 2024 | 492 horas</p>
+                    <ul class="education-details">
+                        <li>Análise Crítica de Evidências</li>
+                        <li>Elaboração de Documentação Técnica</li>
+                    </ul>
+                </div>
+
+                <div class="education-item">
+                    <h4 class="education-institution">Cuidados Paliativos</h4>
+                    <ul class="education-details">
+                        <li>MJHS Institute for Innovation in Palliative Care | 2024</li>
+                        <li>University of Colorado System Palliative Care Program | 2024</li>
+                    </ul>
+                </div>
+
+                <h3 class="education-level">Graduação</h3>
+                <div class="education-item">
+                    <h4 class="education-institution">Medicina</h4>
+                    <p class="education-period">FAMEMA | 2020</p>
+                    <ul class="education-details">
+                        <li>Nota 5 ENADE</li>
+                        <li>Metodologia PBL (Problem-Based Learning)</li>
+                    </ul>
                 </div>
             </div>
 
             <div class="section">
                 <h2 class="section-title"><i class="fa-solid fa-earth-americas"></i> Experiência Internacional</h2>
-                <div class="international-experience">
-                    <div class="international-experience-item">
-                        <h3 class="international-experience-title">Estágio - Embaixada da ONU</h3>
-                        <ul class="international-experience-details">
-                            <li>Desenvolvimento de relatórios técnicos internacionais, aprimorando a capacidade de comunicação escrita e a análise de dados em saúde pública.</li>
-                            <li>Participação em projetos de saúde global, ampliando a compreensão sobre os desafios e as tendências do setor em nível internacional.</li>
-                        </ul>
-                    </div>
+                <div class="international-experience-item">
+                    <h3 class="international-experience-title">Estágio - Embaixada da ONU</h3>
+                    <ul class="international-experience-details">
+                        <li>Desenvolvimento de relatórios técnicos internacionais, aprimorando a capacidade de
+                            comunicação escrita e a análise de dados em saúde pública.</li>
+                        <li>Participação em projetos de saúde global, ampliando a compreensão sobre os desafios e as
+                            tendências do setor em nível internacional.</li>
+                    </ul>
+                </div>
 
-                    <div class="international-experience-item">
-                        <h3 class="international-experience-title">Representante Brasileiro - 56ª Assembleia Geral
-                            OMS/OPAS | 2018</h3>
-                        <ul class="international-experience-details">
-                            <li>Participação em comitês técnicos internacionais, desenvolvendo habilidades de negociação, argumentação e trabalho em equipe em um ambiente multicultural.</li>
-                            <li>Desenvolvimento de diretrizes e protocolos, aprimorando a capacidade de análise crítica e a proposição de soluções para problemas complexos de saúde.</li>
-                            <li>Experiência que me permitiu desenvolver uma visão global da saúde, compreender as nuances da diplomacia em saúde e aprimorar minhas habilidades de comunicação intercultural, competências essenciais para a função de Médico - Relacionamento Médico em um contexto globalizado, como o da SulAmérica.</li>
-                        </ul>
-                    </div>
-
-                    <div class="international-experience-item">
-                        <h3 class="international-experience-title">Membro - International AIDS Society | 2020-2023</h3>
-                        <ul class="international-experience-details">
-                            <li>Análise de protocolos internacionais, aprimorando o conhecimento sobre as melhores práticas e as tendências globais no tratamento do HIV/AIDS.</li>
-                            <li>Participação em grupos técnicos de trabalho, desenvolvendo a capacidade de colaboração e a troca de conhecimento com especialistas de diferentes países.</li>
-                        </ul>
-                    </div>
+                <div class="international-experience-item">
+                    <h3 class="international-experience-title">Representante Brasileiro - 56ª Assembleia Geral
+                        OMS/OPAS</h3>
+                    <p class="international-experience-period">2018</p>
+                    <ul class="international-experience-details">
+                        <li>Participação em comitês técnicos internacionais, desenvolvendo habilidades de negociação,
+                            argumentação e trabalho em equipe em um ambiente multicultural.</li>
+                        <li>Desenvolvimento de diretrizes e protocolos, aprimorando a capacidade de análise crítica e a
+                            proposição de soluções para problemas complexos de saúde.</li>
+                        <li>Experiência que me permitiu desenvolver uma visão global da saúde, compreender as nuances da
+                            diplomacia em saúde e aprimorar minhas habilidades de comunicação intercultural, competências
+                            essenciais para a função de Médico - Relacionamento Médico em um contexto globalizado, como o
+                            da SulAmérica.</li>
+                    </ul><div class="international-experience-item">
+                    <h3 class="international-experience-title">Membro - International AIDS Society</h3>
+                    <p class="international-experience-period">2020-2023</p>
+                    <ul class="international-experience-details">
+                        <li>Análise de protocolos internacionais, aprimorando o conhecimento sobre as melhores práticas
+                            e as tendências globais no tratamento do HIV/AIDS.</li>
+                        <li>Participação em grupos técnicos de trabalho, desenvolvendo a capacidade de colaboração e a
+                            troca de conhecimento com especialistas de diferentes países.</li>
+                    </ul>
                 </div>
             </div>
 
@@ -484,9 +488,13 @@ body {
             <div class="section">
                 <h2 class="section-title">Certificações e Cursos Relevantes</h2>
                 <ul class="certifications">
-                    <li>AI in Healthcare - Stanford University (2024) - Exploração do uso de inteligência artificial para diagnóstico, tratamento e otimização de processos em saúde, com foco em aplicações na indústria de seguros de saúde.</li>
-                    <li>Medical Neuroscience - Duke University (2024) - Aprofundamento em neurociência, relevante para a compreensão de doenças neurológicas e psiquiátricas, áreas de interesse para a SulAmérica.</li>
-                    <li>Gestão de Processos em Saúde - EEPHCFMUSP - Foco em eficiência operacional e melhoria contínua, habilidades essenciais para a otimização de processos na SulAmérica.</li>
+                    <li>AI in Healthcare - Stanford University (2024) - Exploração do uso de inteligência artificial para
+                        diagnóstico, tratamento e otimização de processos em saúde, com foco em aplicações na indústria
+                        de seguros de saúde.</li>
+                    <li>Medical Neuroscience - Duke University (2024) - Aprofundamento em neurociência, relevante para a
+                        compreensão de doenças neurológicas e psiquiátricas, áreas de interesse para a SulAmérica.</li>
+                    <li>Gestão de Processos em Saúde - EEPHCFMUSP - Foco em eficiência operacional e melhoria contínua,
+                        habilidades essenciais para a otimização de processos na SulAmérica.</li>
                 </ul>
             </div>
 
@@ -509,8 +517,6 @@ body {
             </div>
         </div>
     </div>
-
-    <script src="curriculo.js"></script>
 </body>
 
 </html>
