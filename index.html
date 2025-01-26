@@ -165,102 +165,137 @@ body {
     font-size: 0.9em;
     color: #555;
 }
-      
-@media print {
-  body {
-    font-size: 11pt;
-    color: #000 !important; /* Força a cor preta */
-    background-color: #fff !important; /* Força o fundo branco */
-    margin: 0;
-    padding: 0;
-    -webkit-print-color-adjust: exact; /* Força a impressão de cores em navegadores baseados em Webkit (Chrome, Safari) */
-    print-color-adjust: exact; /* Força a impressão de cores em outros navegadores */
+
+      @media print {
+  /* Basic page setup */
+  @page {
+    size: A4;
+    margin: 1.5cm;
   }
 
+  body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    background: white !important;
+    font-size: 11pt;
+    line-height: 1.3;
+    color: black !important;
+  }
+
+  /* Container adjustments */
   .container {
+    width: 100% !important;
+    max-width: none;
+    margin: 0;
+    padding: 0;
     box-shadow: none;
     border: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
   }
 
+  /* Header section */
   .header {
-    background-color: #0d47a1 !important; /* Força o fundo azul */
-    color: #fff !important; /* Força o texto branco */
-    text-align: left;
-    margin: 0;
-    padding: 10px 10px 0 10px;
-    display: block;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    background-color: #0d47a1 !important;
+    color: white !important;
+    padding: 15px;
+    break-after: avoid;
   }
 
-  .header .title,
-  .header .subtitle {
-    color: #fff !important; /* Força o texto branco */
-    margin: 0;
+  .title {
+    color: white !important;
+    font-size: 24pt;
+    margin-bottom: 5px;
   }
 
-  .header .subtitle {
-      margin-bottom: 5px;
+  .subtitle {
+    color: white !important;
+    font-size: 14pt;
   }
 
+  /* Contact info adjustments */
   .contact-info {
-      margin-top: 0;
-      padding: 0 10px;
-      font-size: 10pt;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 0;
   }
 
   .contact-info div {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin: 0;
+    flex: 0 0 auto;
+    margin-right: 20px;
     white-space: nowrap;
   }
 
+  /* Section formatting */
+  .section {
+    margin: 15px 0;
+    break-inside: avoid;
+  }
+
   .section-title {
-    background-color: transparent;
-    page-break-inside: avoid;
-    margin-top: 0;
-    margin-bottom: 5px;
-    padding: 5px 10px;
-    color: #0d47a1 !important; /* Força a cor do titulo da seção */
+    color: #0d47a1 !important;
+    font-size: 14pt;
+    margin: 15px 0 10px;
+    padding: 0;
+    background: none;
   }
 
-  .section {
-    page-break-inside: avoid;
-    margin: 0;
-    padding: 0 10px;
-  }
-
-  /* Forçar quebras de página entre as seções */
-  .section {
-    page-break-after: always;
-  }
-
-  /* Experiência Profissional - Ajustes */
-  .experience-item {
+  /* Content spacing */
+  .experience-item,
+  .education-item,
+  .international-experience-item {
+    break-inside: avoid;
     margin-bottom: 10px;
+    background: none;
+    padding: 0;
   }
 
-  .experience-title, .education-institution, .international-experience-title {
-      margin-bottom: 2px;
-  }
-
-  .experience-period, .education-details, .international-experience-details, .certifications {
-      font-size: 10pt;
-  }
-
-  /* Esconder ícones na impressão */
-  .contact-info i, .section-title i {
+  /* Hide decorative elements */
+  .fa-solid,
+  .fa-brands {
     display: none;
   }
 
-  /* Margens da página */
-  @page {
-    margin: 1cm;
+  /* Skills grid optimization */
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .skill {
+    background: none;
+    padding: 4px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  /* Languages section */
+  .languages {
+    display: flex;
+    gap: 20px;
+  }
+
+  .language {
+    background: none;
+    padding: 0;
+  }
+
+  /* Avoid orphans and widows */
+  p, li {
+    orphans: 3;
+    widows: 3;
   }
 }
+
+/* Add page breaks */
+@media print {
+  .section:not(:last-child) {
+    break-after: always;
+  }
+}
+
   </style>
 </head>
 <body>
