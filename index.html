@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -16,45 +17,67 @@
 
         /* --- GERAL --- */
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Roboto', sans-serif; /* Fonte mais moderna e profissional */
+            background-color: #f8f8f8;
             color: #333;
             line-height: 1.6;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 850px;
             margin: 30px auto;
             background-color: #fff;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden; /* Para evitar que o conteúdo vaze em alguns casos */
         }
 
+        /* --- CABEÇALHO --- */
         .header {
-            background-color: #0d47a1;
+            background-color: #004d66; /* Tom de azul mais escuro e corporativo */
             color: #fff;
-            padding: 20px;
+            padding: 30px;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin-bottom: 20px;
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
         }
 
         .title {
             margin: 0;
-            font-size: 2.2em;
+            font-size: 2.4em;
             font-weight: bold;
         }
 
         .subtitle {
-            margin: 5px 0 15px 0;
-            font-size: 1.1em;
+            margin: 5px 0 0 0;
+            font-size: 1.2em;
             font-weight: normal;
+            color: #e0e0e0;
         }
 
         .contact-info {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
-            font-size: 0.9em;
+            gap: 20px;
+            font-size: 0.95em;
+            margin-top: 20px;
         }
 
         .contact-info div {
@@ -63,39 +86,77 @@
             gap: 8px;
         }
 
+        .contact-info i {
+            color: #007799; /* Tom de azul um pouco mais claro */
+        }
+
+        /* --- CONTEÚDO --- */
         .content {
-            padding: 20px;
+            padding: 30px;
         }
 
         .section {
             margin-bottom: 30px;
+            page-break-inside: avoid;
         }
 
         .section-title {
-            background-color: #eee;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 15px;
+            color: #004d66;
+            font-size: 1.3em;
             font-weight: bold;
+            border-bottom: 3px solid #007799;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
         }
 
         .section-title i {
-            color: #0d47a1;
             margin-right: 10px;
+        }
+
+        .sidebar {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .sidebar .section-title {
+            margin-bottom: 10px;
+        }
+
+        .sidebar-content {
+            margin-bottom: 20px;
+        }
+
+        .sidebar-content h4 {
+            color: #004d66;
+            margin-bottom: 5px;
+        }
+
+        .sidebar-content ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .sidebar-content ul li {
+            margin-bottom: 8px;
         }
 
         .experience-item,
         .education-item,
         .international-experience-item {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            page-break-inside: avoid;
         }
 
         .experience-title,
         .education-institution,
         .international-experience-title {
             margin: 0 0 5px 0;
-            color: #0d47a1;
+            color: #004d66;
             font-weight: 600;
+            font-size: 1.1em;
         }
 
         .experience-period,
@@ -103,7 +164,7 @@
         .international-experience-period {
             margin-bottom: 10px;
             font-size: 0.9em;
-            color: #555;
+            color: #666;
         }
 
         .experience-details,
@@ -111,36 +172,38 @@
         .international-experience-details {
             list-style-type: disc;
             margin-left: 20px;
-            font-size: 0.9em;
+            font-size: 0.95em;
             color: #444;
+            margin-bottom: 15px;
         }
 
         .education-level {
-            margin-top: 20px;
-            margin-bottom: 10px;
-            color: #0d47a1;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            color: #004d66;
             font-weight: 600;
+            font-size: 1.1em;
         }
 
         .skills {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 15px;
         }
 
         .skill {
-            background-color: #f8f8f8;
-            padding: 10px;
-            border-radius: 5px;
+            background-color: #e0e0e0;
+            padding: 10px 15px;
+            border-radius: 20px;
             font-size: 0.9em;
-            color: #444;
-            flex-grow: 1;
+            color: #333;
+            border: 1px solid #007799;
         }
 
         .certifications {
             list-style-type: disc;
             margin-left: 20px;
-            font-size: 0.9em;
+            font-size: 0.95em;
             color: #444;
         }
 
@@ -151,17 +214,19 @@
         }
 
         .language {
-            background-color: #f8f8f8;
+            background-color: #f0f0f0;
             padding: 15px;
             border-radius: 5px;
             text-align: center;
-            flex-grow: 1;
+            width: calc(33% - 10px);
+            border: 1px solid #007799;
         }
 
         .language-name {
             margin: 0 0 5px 0;
-            color: #0d47a1;
+            color: #004d66;
             font-weight: 600;
+            font-size: 1em;
         }
 
         .language-level {
@@ -169,30 +234,38 @@
             color: #555;
         }
 
-        /* --- ATS --- */
-        .section-title {
-            text-transform: uppercase;
-        }
-
-        /* --- PDF --- */
+        /* --- ESTILOS PARA IMPRESSÃO (PDF) --- */
         @media print {
-            * {
+            *,
+            body {
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
-            }
-
-            body {
+                font-family: 'Roboto', sans-serif;
                 font-size: 10pt;
+                line-height: 1.3;
             }
 
             .container {
                 box-shadow: none;
+                border: none;
                 margin: 0;
                 padding: 0;
+                max-width: 100%;
             }
 
             .header {
-                padding: 15px;
+                padding: 20px;
+            }
+
+            .profile-pic {
+                width: 80px;
+                height: 80px;
+                border: 2px solid white;
+            }
+
+            .header-content {
+                gap: 15px;
+                margin-bottom: 15px;
             }
 
             .title {
@@ -205,20 +278,43 @@
 
             .contact-info {
                 font-size: 0.8em;
+                gap: 12px;
+                margin-top: 15px;
             }
 
             .content {
-                padding: 15px;
+                padding: 20px;
             }
 
             .section {
-                page-break-inside: avoid;
                 margin-bottom: 20px;
             }
 
             .section-title {
-                padding: 8px;
-                margin-bottom: 10px;
+                font-size: 1.1em;
+                padding-bottom: 3px;
+                margin-bottom: 15px;
+            }
+
+            .sidebar {
+                padding: 15px;
+                margin-bottom: 20px;
+            }
+
+            .sidebar .section-title {
+                margin-bottom: 8px;
+            }
+
+            .sidebar-content {
+                margin-bottom: 15px;
+            }
+
+            .sidebar-content ul {
+                margin-left: 15px;
+            }
+
+            .sidebar-content ul li {
+                margin-bottom: 5px;
             }
 
             .experience-item,
@@ -227,15 +323,23 @@
                 margin-bottom: 15px;
             }
 
+            .experience-title,
+            .education-institution,
+            .international-experience-title {
+                font-size: 1em;
+            }
+
             .experience-details,
             .education-details,
             .international-experience-details {
-                font-size: 0.8em;
+                font-size: 0.9em;
+                margin-bottom: 10px;
             }
 
             .education-level {
                 margin-top: 15px;
-                margin-bottom: 8px;
+                margin-bottom: 10px;
+                font-size: 1em;
             }
 
             .skills {
@@ -243,33 +347,29 @@
             }
 
             .skill {
-                padding: 8px;
+                padding: 8px 12px;
                 font-size: 0.8em;
             }
 
             .certifications {
-                font-size: 0.8em;
+                font-size: 0.9em;
             }
 
             .languages {
-                gap: 10px;
+                gap: 8px;
             }
 
             .language {
                 padding: 10px;
+                width: calc(33% - 6px);
+            }
+
+            .language-name {
+                font-size: 0.9em;
             }
 
             .language-level {
                 font-size: 0.8em;
-            }
-
-            .fa-solid,
-            .fa-brands {
-                display: none;
-            }
-        }
-
-
             }
         }
     </style>
@@ -278,8 +378,13 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1 class="title">Dr. Gustavo Mendes e Silva</h1>
-            <h2 class="subtitle">Médico | Especialista em Análise Técnica e Relacionamento Médico</h2>
+            <div class="header-content">
+                <img src="foto_perfil.jpg" alt="Foto de Perfil" class="profile-pic">
+                <div>
+                    <h1 class="title">Dr. Gustavo Mendes e Silva</h1>
+                    <h2 class="subtitle">Médico | Especialista em Análise Técnica e Relacionamento Médico</h2>
+                </div>
+            </div>
             <div class="contact-info">
                 <div><i class="fa-solid fa-id-card"></i> CRM: 218133/SP</div>
                 <div><i class="fa-solid fa-envelope"></i> gustavo@healthhealth.care</div>
@@ -366,8 +471,7 @@
                         <li>Desenvolvimento de competências em gestão de operadoras de planos de saúde, análise de custos
                             e otimização de processos, essenciais para a atuação em Relacionamento Médico na SulAmérica.
                         </li>
-                    </ul>
-                </div>
+                    </ul></div>
 
                 <div class="education-item">
                     <h4 class="education-institution">MIT MicroMasters in Digital Transformation (Em andamento)</h4>
@@ -451,7 +555,10 @@
                             diplomacia em saúde e aprimorar minhas habilidades de comunicação intercultural, competências
                             essenciais para a função de Médico - Relacionamento Médico em um contexto globalizado, como o
                             da SulAmérica.</li>
-                    </ul><div class="international-experience-item">
+                    </ul>
+                </div>
+
+                <div class="international-experience-item">
                     <h3 class="international-experience-title">Membro - International AIDS Society</h3>
                     <p class="international-experience-period">2020-2023</p>
                     <ul class="international-experience-details">
@@ -462,37 +569,33 @@
                     </ul>
                 </div>
             </div>
-
             <div class="section">
-                <h2 class="section-title"><i class="fa-solid fa-certificate"></i> Competências Técnicas</h2>
-                <div class="skills">
-                    <div class="skill">Análise técnica e elaboração de pareceres médicos</div>
-                    <div class="skill">Auditoria e avaliação de casos complexos</div>
-                    <div class="skill">Desenvolvimento de protocolos assistenciais</div>
-                    <div class="skill">Gestão de processos em saúde suplementar</div>
-                    <div class="skill">Conhecimento em ROL ANS e regulação</div>
-                    <div class="skill">Elaboração de documentação técnica especializada</div>
-                    <div class="skill">Relacionamento médico e gestão de equipes</div>
-                    <div class="skill">Análise crítica de evidências científicas</div>
-                    <div class="skill">Conhecimento em Boas Práticas Clínicas (GCP)</div>
-                    <div class="skill">Familiaridade com as diretrizes da ANVISA</div>
-                    <div class="skill">Experiência em interação com comitês de ética em pesquisa</div>
-                    <div class="skill">Habilidade em comunicação científica</div>
-                    <div class="skill">Capacidade de traduzir informações técnicas para públicos diversos</div>
+                <div class="sidebar">
+                    <h2 class="section-title"><i class="fa-solid fa-certificate"></i> Certificações</h2>
+                    <div class="sidebar-content">
+                        <ul>
+                            <li>AI in Healthcare - Stanford University (2024)</li>
+                            <li>Medical Neuroscience - Duke University (2024)</li>
+                            <li>Gestão de Processos em Saúde - EEPHCFMUSP</li>
+                        </ul>
+                    </div>
+                
+                    <h2 class="section-title"><i class="fa-solid fa-check-circle"></i> Competências Técnicas</h2>
+                    <div class="skills">
+                        <div class="skill">Análise Técnica</div>
+                        <div class="skill">Pareceres Médicos</div>
+                        <div class="skill">Auditoria</div>
+                        <div class="skill">Protocolos Assistenciais</div>
+                        <div class="skill">Gestão em Saúde</div>
+                        <div class="skill">Rol ANS</div>
+                        <div class="skill">Relacionamento Médico</div>
+                        <div class="skill">Comunicação Científica</div>
+                        <div class="skill">Inglês Fluente</div>
+                        <div class="skill">Análise de Evidências</div>
+                        <div class="skill">Boas Práticas Clínicas</div>
+                        <div class="skill">Diretrizes ANVISA</div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="section">
-                <h2 class="section-title">Certificações e Cursos Relevantes</h2>
-                <ul class="certifications">
-                    <li>AI in Healthcare - Stanford University (2024) - Exploração do uso de inteligência artificial para
-                        diagnóstico, tratamento e otimização de processos em saúde, com foco em aplicações na indústria
-                        de seguros de saúde.</li>
-                    <li>Medical Neuroscience - Duke University (2024) - Aprofundamento em neurociência, relevante para a
-                        compreensão de doenças neurológicas e psiquiátricas, áreas de interesse para a SulAmérica.</li>
-                    <li>Gestão de Processos em Saúde - EEPHCFMUSP - Foco em eficiência operacional e melhoria contínua,
-                        habilidades essenciais para a otimização de processos na SulAmérica.</li>
-                </ul>
             </div>
 
             <div class="section">
