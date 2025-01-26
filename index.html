@@ -165,6 +165,100 @@ body {
     font-size: 0.9em;
     color: #555;
 }
+
+@media print {
+  body {
+    font-size: 11pt; /* Reduzir um pouco para evitar quebras */
+    color: #000;
+    background-color: #fff;
+    margin: 0; /* Zerar margens para controle manual */
+    padding: 0;
+  }
+
+  .container {
+    box-shadow: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ocupar toda a largura */
+  }
+
+  .header {
+    background-color: #fff;
+    color: #000;
+    text-align: left;
+    margin: 0;
+    padding: 10px 10px 0 10px; /* Reduzir padding superior, adicionar nas laterais e manter 0 no inferior */
+    display: block; /* Quebra o Flexbox para evitar cortes */
+  }
+
+  .header .title,
+  .header .subtitle {
+    color: #000;
+    margin: 0; /* Zerar margens para controle manual */
+  }
+
+  .header .subtitle {
+      margin-bottom: 5px;
+  }
+
+  .contact-info {
+      margin-top: 0;
+      padding: 0 10px;
+      font-size: 10pt;
+  }
+
+  .contact-info div {
+    display: flex; /* Manter o Flexbox por enquanto */
+    align-items: center;
+    gap: 5px; /* Ajustar o espaçamento */
+    margin: 0; /* Zerar margens */
+    white-space: nowrap; /* Evitar quebra de linha */
+  }
+
+  .section-title {
+    background-color: transparent;
+    page-break-inside: avoid;
+    margin-top: 0; /* Reduzir margem superior */
+    margin-bottom: 5px; /* Reduzir margem inferior */
+    padding: 5px 10px; /* Adicionar padding nas laterais */
+  }
+
+  .section {
+    page-break-inside: avoid;
+    margin: 0; /* Zerar margens */
+    padding: 0 10px; /* Adicionar padding nas laterais */
+  }
+
+  /* Forçar quebras de página entre as seções */
+  .section {
+    page-break-after: always;
+  }
+
+  /* Experiência Profissional - Ajustes */
+  .experience-item {
+    margin-bottom: 10px; /* Reduzir espaçamento */
+  }
+
+  .experience-title, .education-institution, .international-experience-title {
+      margin-bottom: 2px;
+  }
+
+  .experience-period, .education-details, .international-experience-details, .certifications {
+      font-size: 10pt;
+  }
+
+  /* Esconder ícones na impressão */
+  .contact-info i, .section-title i {
+    display: none;
+  }
+
+  /* Margens da página */
+  @page {
+    margin: 1cm; /* Margens de 1cm em todos os lados */
+  }
+}
+
     
   </style>
 </head>
