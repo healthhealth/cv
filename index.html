@@ -3,587 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Gustavo Mendes e Silva</title>
+    <title>Ensaio sobre o Tempo - Gustavo Mendes</title>
     <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #34495e;
-            --accent-color: #3498db;
-            --text-color: #2c3e50;
-            --light-gray: #ecf0f1;
-            --spacing-unit: 1.5rem;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Georgia', serif;
             line-height: 1.6;
-            color: var(--text-color);
-            max-width: 1200px;
+            margin: 0;
+            padding: 40px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
             margin: 0 auto;
-            padding: var(--spacing-unit);
-            background-color: white;
         }
-
-        header {
-            margin-bottom: calc(var(--spacing-unit) * 2);
-        }
-
         h1 {
-            font-size: 2.5rem;
-            font-weight: 300;
-            color: var(--primary-color);
-            margin-bottom: calc(var(--spacing-unit) / 2);
-            letter-spacing: -0.5px;
+            text-align: center;
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 40px;
         }
-
         h2 {
-            font-size: 1.75rem;
-            font-weight: 400;
-            color: var(--secondary-color);
-            margin: calc(var(--spacing-unit) * 2) 0 var(--spacing-unit);
-            letter-spacing: -0.3px;
-            border-bottom: 1px solid var(--light-gray);
-            padding-bottom: calc(var(--spacing-unit) / 2);
+            font-size: 1.8em;
+            color: #34495e;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-top: 60px;
         }
-
-        h3 {
-            font-size: 1.25rem;
-            font-weight: 500;
-            color: var(--secondary-color);
-            margin: var(--spacing-unit) 0 calc(var(--spacing-unit) / 2);
+        p {
+            text-align: justify;
+            margin-bottom: 20px;
         }
-
-        .subtitle {
-            font-size: 1.25rem;
-            color: var(--secondary-color);
-            margin-bottom: var(--spacing-unit);
-            font-weight: 300;
+        .toc {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 40px;
         }
-
-        .contact {
-            display: flex;
-            flex-wrap: wrap;
-            gap: calc(var(--spacing-unit) / 2) var(--spacing-unit);
-            margin-top: calc(var(--spacing-unit) / 2);
+        .toc h2 {
+            margin-top: 0;
+            border-bottom: none;
         }
-
-        .contact-item {
-            color: var(--secondary-color);
+        .toc ul {
+            list-style: none;
+            padding: 0;
+        }
+        .toc li {
+            margin: 10px 0;
+        }
+        .toc a {
+            color: #2980b9;
             text-decoration: none;
         }
-
-        .contact-item:hover {
-            color: var(--accent-color);
+        .toc a:hover {
+            text-decoration: underline;
         }
-
-        .section {
-            margin-bottom: calc(var(--spacing-unit) * 2);
+        .symbol {
+            text-align: center;
+            font-style: italic;
+            color: #7f8c8d;
+            margin: 20px 0;
         }
-
-        .experience-item {
-            margin-bottom: var(--spacing-unit);
-        }
-
-        .experience-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: calc(var(--spacing-unit) / 4);
-        }
-
-        .company {
-            font-weight: 500;
-        }
-
-        .period {
-            color: var(--secondary-color);
-            font-size: 0.9rem;
-            white-space: nowrap;
-            margin-left: var(--spacing-unit);
-        }
-
-        .description {
-            margin-top: calc(var(--spacing-unit) / 2);
-        }
-
-        .description ul {
-            list-style-type: none;
-            padding-left: calc(var(--spacing-unit) / 2);
-        }
-
-        .description li {
-            margin-bottom: calc(var(--spacing-unit) / 2);
-            position: relative;
-        }
-
-        .description li::before {
-            content: "•";
-            color: var(--accent-color);
-            position: absolute;
-            left: -1rem;
-        }
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: calc(var(--spacing-unit) / 2);
-        }
-
-        .skill {
-            background-color: var(--light-gray);
-            padding: calc(var(--spacing-unit) / 4) calc(var(--spacing-unit) / 2);
-            border-radius: 4px;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 768px) {
-            :root {
-                --spacing-unit: 1rem;
-            }
-
-            body {
-                padding: var(--spacing-unit);
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            .experience-header {
-                flex-direction: column;
-            }
-
-            .period {
-                margin-left: 0;
-            }
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #7f8c8d;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Dr. Gustavo Mendes e Silva</h1>
-        <div class="subtitle">Médico | Especialista em Análise Técnica e Relacionamento Médico | Psiquiatria - Cannabis Medicinal - Cuidados Paliativos</div>
-        <div class="contact">
-            <span class="contact-item">CRM: 218133/SP</span>
-            <a href="mailto:gustavo@healthhealth.care" class="contact-item">gustavo@healthhealth.care</a>
-            <span class="contact-item">11-91539-8330 | 11-96546-1146</span>
-            <span class="contact-item">Vila Olímpia, São Paulo</span>
-            <a href="linkedin.com/in/mendes-e-silva" class="contact-item">linkedin.com/in/mendes-e-silva</a>
-        </div>
-    </header>
+    <div class="container">
+        <h1>Ensaio sobre o Tempo</h1>
+        <p style="text-align: center; font-style: italic;">Gustavo Mendes</p>
 
-    <section class="section">
-        <h2>Perfil Clínico</h2>
-        <div class="description">
-            <p>Médico psiquiatra com formação especializada em saúde mental, cannabis medicinal e cuidados paliativos, integrando tecnologias avançadas à prática clínica. Experiência consolidada no manejo de casos complexos, prescrição de cannabis medicinal e aplicação de inteligência artificial em processos assistenciais. Pioneiro na integração de terapias canabinoides e tecnologias digitais ao tratamento psiquiátrico, com foco em cuidado humanizado e baseado em evidências. Membro da Society of Cannabis Clinicians (SCC).</p>
-        </div>
-    </section>
-
-    <section class="section">
-        <h2>Objetivo Profissional</h2>
-        <div class="description">
-            <p>Contribuir para a área de Relacionamento Médico da SulAmérica, aplicando minha sólida experiência clínica, expertise em análise técnica e paixão por inovação em saúde para fortalecer o relacionamento com profissionais e instituições de saúde, além de impulsionar o sucesso da empresa e aprimorar a qualidade do atendimento aos beneficiários.</p>
-        </div>
-    </section>
-
-    <section class="section">
-        <h2>Experiência Profissional</h2>
-
-        <div class="experience-item">
-            <div class="experience-header">
-                <span class="company">Médico Psiquiatra - CAPS II Jaçanã Tremembé</span>
-                <span class="period">Outubro 2024 - Atual</span>
-            </div>
-            <div class="description">
-                <ul>
-                    <li>Atendimento especializado em transtornos mentais severos e persistentes</li>
-                    <li>Manejo de casos psiquiátricos complexos e situações de crise</li>
-                    <li>Coordenação de planos terapêuticos com equipe multidisciplinar</li>
-                    <li>Supervisão e suporte a casos complexos</li>
-                    <li>Análise técnica e elaboração de pareceres especializados, com foco em avaliação de risco, definição de condutas e orientação a pacientes e familiares</li>
-                    <li>Desenvolvimento de planos terapêuticos multidisciplinares, integrando diferentes abordagens terapêuticas para a otimização do cuidado</li>
-                    <li>Participação em comitês de análise de casos complexos, contribuindo para a construção de soluções inovadoras e centradas no paciente</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="experience-item">
-            <div class="experience-header">
-                <span class="company">Médico Psiquiatra - CAPS IJ Diadema</span>
-                <span class="period">Maio 2024</span>
-            </div>
-            <div class="description">
-                <ul>
-                    <li>Atendimento psiquiátrico infantojuvenil especializado</li>
-                    <li>Intervenções familiares sistemáticas</li>
-                    <li>Manejo de crises em adolescentes</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="experience-item">
-            <div class="experience-header">
-                <span class="company">Médico Psiquiatra - CAPS AD Diadema</span>
-                <span class="period">Abril 2024 - Maio 2024</span>
-            </div>
-            <div class="description">
-                <ul>
-                    <li>Tratamento especializado em dependência química</li>
-                    <li>Reabilitação psicossocial</li>
-                    <li>Prevenção de recaídas</li>
-                    <li>Grupos terapêuticos</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="experience-item">
-            <div class="experience-header">
-                <span class="company">Médico Psiquiatra - UPA Jaçanã</span>
-                <span class="period">Março 2024 - Junho 2024</span>
-            </div>
-            <div class="description">
-                <ul>
-                    <li>Atendimento de emergências psiquiátricas 24h</li>
-                    <li>Manejo de crises e emergências</li>
-                    <li>Avaliação e estabilização de pacientes agudos</li>
-                    <li>Intervenção em tentativas de suicídio</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="experience-item">
-            <div class="experience-header">
-                <span class="company">Médico Interlocutor de Rede e Responsável Técnico - Associação Saúde da Família</span>
-                <span class="period">2022 - 2023</span>
-            </div>
-            <div class="description">
-                <ul>
-                    <li>Análise de diversos casos complexos, fornecendo pareceres técnicos que resultaram em uma otimização do tempo de resolução e na melhoria da satisfação dos pacientes</li>
-                    <li>Elaboração e implementação de protocolos assistenciais baseados em evidências, com foco em otimização de recursos e melhoria da qualidade do atendimento</li>
-                    <li>Coordenação de comitês técnicos para avaliação de casos e desenvolvimento de diretrizes, promovendo a integração entre as equipes e a adoção de melhores práticas</li>
-                    <li>Desenvolvimento de documentação técnica e relatórios especializados, assegurando a conformidade com as normas regulatórias e a transparência dos processos</li>
-                    <li>Supervisão de processos assistenciais e interface com órgãos reguladores, garantindo a qualidade e a segurança dos serviços prestados</li>
-                    <li>Experiência em gestão de rede credenciada, negociação com prestadores e controle de custos assistenciais</li>
-                    <li>Responsabilidade técnica com foco em compliance e excelência operacional</li>
-                    <li>Implementação de protocolos de cuidados integrados</li>
-                    <li>Coordenação de equipes multiprofissionais</li>
-                    <li>Desenvolvimento de programas de suporte familiar</li>
-                    <li>Gestão de casos complexos</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="experience-item">
-            <div class="experience-header">
-                <span class="company">Médico Diarista - Hospital Psiquiátrico Cantareira - SPDM</span>
-                <span class="period">2021 - 2022</span>
-            </div>
-            <div class="description">
-                <ul>
-                    <li>Desenvolvimento de protocolos e fluxos assistenciais, contribuindo para a padronização e a eficiência do atendimento</li>
-                    <li>Participação em comissões técnicas e análise de casos complexos, demonstrando capacidade de avaliação crítica e tomada de decisão embasada em evidências</li>
-                    <li>Elaboração de pareceres e documentação técnica especializada, com foco na clareza, precisão e objetividade da comunicação</li>
-                    <li>Interface com equipes multidisciplinares e gestão assistencial, aprimorando a capacidade de trabalho em equipe e a coordenação de cuidados</li>
-                    <li>Atendimento diário em enfermaria</li>
-                    <li>Manejo de casos agudos e crônicos</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <h2>Formação Acadêmica</h2>
-
-        <h3>Pós-Graduação e MBA</h3>
-        
-        <div class="experience-item">
-            <div class="experience-header">
-                <span class="company">MBA em Gestão, Inovação e Serviços em Saúde - PUC-RS</span>
-                <span class="period">2024</span>
-            </div>
-            <div class="description">
-                <ul>
-                    <li>Foco em regulação em saúde suplementar, gestão da qualidade assistencial e auditoria em saúde</li>
-                    <li>Módulos específicos sobre inovação no setor de seguros de saúde e estratégias de acesso ao mercado</li>
-                    <li>Desenvolvimento de competências em gestão de operadoras de planos de saúde, análise de custos e otimização de processos </ul>
-            </div>
-        </div>
-
-        <div class="experience-item">
-            <div class="experience-header">
-                <span class="company">MIT MicroMasters in Digital Transformation</span>
-                <span class="period">Em andamento</span>
-            </div>
-            <div class="description">
-                <ul>
-                    <li>Digital Transformation Strategy</li>
-                    <li>Healthcare Process Innovation</li>
-                    <li>Leadership in Healthcare Organizations</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="experience-item">
-            <div class="experience-header">
-                <span class="company">MBA em Health Tech - FIAP</span>
-                <span class="period">Em andamento</span>
-            </div>
-            <div class="description">
-                <ul>
-                    <li>Gestão de Processos Assistenciais</li>
-                    <li>Inovação em Saúde</li>
-                    <li>Análise de Dados em Saúde</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="experience-item">
-            <div class="experience-header">
-                <span class="company">Especialização em Tecnologia e Dados em Saúde - PUC-PR</span>
-                <span class="period">2024</span>
-            </div>
-            <div class="description">
-                <ul>
-                    <li>Gestão de Processos em Saúde</li>
-                    <li>Análise de Indicadores Assistenciais</li>
-                </ul>
-            </div>
-        </div>
-
-        <h3>Especializações Clínicas</h3>
-
-        <div class="experience-item">
-            <div class="experience-header">
-                <span class="company">Psiquiatria - FGMED</span>
-                <span class="period">2024 | 492 horas</span>
-            </div>
-            <div class="description">
-                <ul>
-                    <li>Análise Crítica de Evidências</li>
-                    <li>Elaboração de Documentação Técnica</li>
-                    <li>Diagnóstico e tratamento avançado de transtornos mentais</li>
-                    <li>Psicofarmacologia avançada</li>
-                    <li>Psicopatologia</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="experience-item">
-            <div class="experience-header">
-                <span class="company">Psiquiatria - Sanar/Cetrus</span>
-                <span class="period">2024 | 432 horas</span>
-            </div>
-            <div class="description">
-                <ul>
-                    <li>Semiologia psiquiátrica</li>
-                    <li>Raciocínio clínico em saúde mental</li>
-                </ul>
-            </div>
-        </div>
-
-        <h3>Formação em Cuidados Paliativos</h3>
-
-        <div class="experience-item">
-            <div class="experience-header">
-                <span class="company">MJHS Institute for Innovation in Palliative Care</span>
-                <span class="period">2024-2025</span>
-            </div>
-            <div class="description">
-                <ul>
-                    <li>Programa avançado de formação em cuidados paliativos</li>
-                    <li>Inovação em cuidados de fim de vida</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="experience-item">
-            <div class="experience-header">
-                <span class="company">Palliative Care Program - University of Colorado</span>
-                <span class="period">2024</span>
-            </div>
-            <div class="description">
-                <ul>
-                    <li>Supporting patients living with serious illness</li>
-                    <li>Providing psychosocial and spiritual support</li>
-                    <li>Pain management for your patients</li>
-                    <li>Easing non-pain physical symptoms</li>
-                </ul>
-            </div>
-        </div>
-
-        <h3>Formação em Medicina Endocanabinoide</h3>
-
-        <div class="experience-item">
-            <div class="experience-header">
-                <span class="company">Clinical Cannabinoid Medicine Specialist - Society of Cannabis Clinicians</span>
-                <span class="period">2024</span>
-            </div>
-            <div class="description">
-                <ul>
-                    <li>Certificação internacional em medicina canabinoide</li>
-                    <li>Manejo avançado de terapias com canabinoides</li>
-                    <li>Aplicações em saúde mental e cuidados paliativos</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="experience-item">
-            <div class="experience-header">
-                <span class="company">The Medical Cannabis Institute - TMCI Global</span>
-                <span class="period">2024</span>
-            </div>
-            <div class="description">
-                <ul>
-                    <li>Clinical Applications of Medical Cannabis</li>
-                    <li>Endocannabinoid System in Clinical Practice</li>
-                    <li>Psychiatric Applications of Cannabinoids</li>
-                </ul>
-            </div>
-        </div>
-
-        <h3>Graduação</h3>
-
-        <div class="experience-item">
-            <div class="experience-header">
-                <span class="company">Medicina - FAMEMA</span>
-                <span class="period">2020</span>
-            </div>
-            <div class="description">
-                <ul>
-                    <li>Nota 5 ENADE</li>
-                    <li>Metodologia PBL (Problem-Based Learning)</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <h2>Experiência Internacional</h2>
-
-        <div class="experience-item">
-            <div class="experience-header">
-                <span class="company">Estágio - Embaixada da ONU</span>
-            </div>
-            <div class="description">
-                <ul>
-                    <li>Desenvolvimento de relatórios técnicos internacionais, aprimorando a capacidade de comunicação escrita e a análise de dados em saúde pública</li>
-                    <li>Participação em projetos de saúde global, ampliando a compreensão sobre os desafios e as tendências do setor em nível internacional</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="experience-item">
-            <div class="experience-header">
-                <span class="company">Representante Brasileiro - 56ª Assembleia Geral OMS/OPAS</span>
-                <span class="period">2018</span>
-            </div>
-            <div class="description">
-                <ul>
-                    <li>Participação em comitês técnicos internacionais, desenvolvendo habilidades de negociação, argumentação e trabalho em equipe em um ambiente multicultural</li>
-                    <li>Desenvolvimento de diretrizes e protocolos, aprimorando a capacidade de análise crítica e a proposição de soluções para problemas complexos de saúde</li>
-                    <li>Experiência que permitiu desenvolver uma visão global da saúde, compreender as nuances da diplomacia em saúde e aprimorar habilidades de comunicação intercultural</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="experience-item">
-            <div class="experience-header">
-                <span class="company">Membro - International AIDS Society</span>
-                <span class="period">2020-2023</span>
-            </div>
-            <div class="description">
-                <ul>
-                    <li>Análise de protocolos internacionais, aprimorando o conhecimento sobre as melhores práticas e as tendências globais no tratamento do HIV/AIDS</li>
-                    <li>Participação em grupos técnicos de trabalho, desenvolvendo a capacidade de colaboração e a troca de conhecimento com especialistas de diferentes países</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <h2>Áreas de Expertise Clínica</h2>
-
-        <h3>Psiquiatria e Medicina Endocanabinoide</h3>
-        <div class="skills">
-            <span class="skill">Sistema Endocanabinoide e Neuropsiquiatria</span>
-            <span class="skill">Modulação Endocanabinoide em Transtornos Mentais</span>
-            <span class="skill">Terapias canabinoides personalizadas</span>
-            <span class="skill">Prescrição especializada de cannabis medicinal</span>
-            <span class="skill">Manejo de condições refratárias</span>
-            <span class="skill">Protocolos integrativos em saúde mental</span>
-            <span class="skill">Psicofarmacologia avançada</span>
-            <span class="skill">Emergências psiquiátricas</span>
-            <span class="skill">Dependência química</span>
-            <span class="skill">Psiquiatria infantojuvenil</span>
-        </div>
-
-        <h3>Medicina Digital e Tecnologias Assistenciais</h3>
-        <div class="skills">
-            <span class="skill">Aplicação de IA no diagnóstico</span>
-            <span class="skill">Telemedicina e atendimento digital</span>
-            <span class="skill">Ferramentas digitais de apoio à decisão clínica</span>
-            <span class="skill">Monitoramento digital de pacientes</span>
-            <span class="skill">Análise preditiva em saúde mental</span>
-        </div>
-
-        <h3>Cuidados Paliativos</h3>
-        <div class="skills">
-            <span class="skill">Manejo de sintomas complexos</span>
-            <span class="skill">Comunicação de más notícias</span>
-            <span class="skill">Suporte ao luto</span>
-            <span class="skill">Cuidados de fim de vida</span>
-            <span class="skill">Abordagem familiar</span>
-        </div>
-    </section>
-
-    <section class="section">
-        <h2>Competências Técnicas</h2>
-        <div class="skills">
-            <span class="skill">Análise técnica e elaboração de pareceres médicos</span>
-            <span class="skill">Auditoria e avaliação de casos complexos</span>
-            <span class="skill">Desenvolvimento de protocolos assistenciais</span>
-            <span class="skill">Gestão de processos em saúde suplementar</span>
-            <span class="skill">Conhecimento em ROL ANS e regulação</span>
-            <span class="skill">Elaboração de documentação técnica especializada</span>
-            <span class="skill">Relacionamento médico e gestão de equipes</span>
-            <span class="skill">Análise crítica de evidências científicas</span>
-            <span class="skill">Conhecimento em Boas Práticas Clínicas (GCP)</span>
-            <span class="skill">Familiaridade com as diretrizes da ANVISA</span>
-            <span class="skill">Experiência em interação com comitês de ética em pesquisa</span>
-            <span class="skill">Habilidade em comunicação científica</span>
-            <span class="skill">Capacidade de traduzir informações técnicas para públicos diversos</span>
-        </div>
-    </section>
-
-    <section class="section">
-        <h2>Certificações e Cursos Relevantes</h2>
-        <div class="description">
+        <div class="toc">
+            <h2>Índice</h2>
             <ul>
-                <li>AI in Healthcare - Stanford University (2024) - Exploração do uso de inteligência artificial para diagnóstico, tratamento e otimização de processos em saúde, com foco em aplicações na indústria de seguros de saúde</li>
-                <li>Medical Neuroscience - Duke University (2024) - Aprofundamento em neurociência, relevante para a compreensão de doenças neurológicas e psiquiátricas</li>
-                <li>Gestão de Processos em Saúde - EEPHCFMUSP - Foco em eficiência operacional e melhoria contínua</li>
-                <li>Medicina Canabinoide - EEPHCFMUSP</li>
-                <li>Transtornos do Sono - CENBRAP</li>
-                <li>Terapia ACT - IBAC</li>
-                <li>Dependência Química - Artmed360 (180h)</li>
+                <li><a href="#cap1">Capítulo 1 - O Despertar do Relojoeiro</a></li>
+                <li><a href="#cap2">Capítulo 2 - Cidade das Horas Invertidas</a></li>
+                <li><a href="#cap3">Capítulo 3 - Vale da Imutabilidade</a></li>
+                <li><a href="#cap4">Capítulo 4 - Jardim do Tempo Perdido</a></li>
+                <li><a href="#cap5">Capítulo 5 - Enigma Filosófico do Tempo</a></li>
+                <li><a href="#cap6">Capítulo 6 - Revolução dos Ponteiros</a></li>
+                <li><a href="#cap7">Capítulo 7 - Transcendência do Tempo</a></li>
             </ul>
         </div>
-    </section>
 
-    <section class="section">
-        <h2>Idiomas</h2>
-        <div class="skills">
-            <span class="skill">Português - Nativo</span>
-            <span class="skill">Inglês - Fluente (TOEFL iBT 108/120)</span>
-            <span class="skill">Espanhol - Intermediário</span>
-            <span class="skill">Francês - Instrumental</span>
+        <div id="cap1">
+            <h2>Capítulo 1 - O Despertar do Relojoeiro</h2>
+            <p>Era uma manhã como outra qualquer, e nisso já se anunciava a primeira das infinitas mentiras que marcariam aquele dia, porque manhã alguma é como outra qualquer, cada uma carregando em sua luz particular o peso acumulado de todos os amanheceres que a precederam, cada raio de sol um fio invisível tecendo o que chamamos de presente com a trama desgastada do passado, cada movimento do ar uma premonição do futuro que já existe antes mesmo de chegar, e o Relojoeiro sabia disso, ou melhor, começava a saber disso enquanto abria as pesadas cortinas de veludo da oficina e deixava que a claridade invadisse o ambiente como uma multidão de pequenas revelações douradas, iluminando o que antes dormia nas sombras, a poeira suspensa no ar dançando como constelações microscópicas, cada partícula um universo completo girando em torno de seu próprio eixo invisível, e ele, parado à janela, sentiu pela primeira vez aquela inquietação que não tinha nome mas que crescia dentro dele como uma raiz antiga despertando de um longo sono, estendendo seus filamentos por entre as engrenagens de sua consciência, por entre os mecanismos precisos de sua razão, que até então funcionavam com a mesma exatidão implacável dos relógios que consertava.</p>
+            <!-- Restante do capítulo 1 aqui -->
+            <p>E assim, caro leitor, você percebe que estamos presos em um ciclo, um eterno retorno, uma brincadeira cruel do tempo. A cada descoberta, voltamos ao ponto de partida, e a cada volta, a compreensão se aprofunda. Porque o tempo, essa entidade caprichosa, adora pregar peças, adora nos fazer pensar que estamos avançando quando, na verdade, estamos apenas circulando ao redor da verdade. E é nesse movimento perpétuo que reside a beleza da busca, a essência do tempo.</p>
         </div>
-    </section>
+
+        <div id="cap2">
+            <h2>Capítulo 2 - Cidade das Horas Invertidas</h2>
+            <p>O Relojoeiro, agora um peregrino do tempo, vagava por caminhos que só um louco ou um poeta ousaria trilhar, e quem, afinal, consegue distinguir entre os dois quando a razão já se desfez como açúcar em água quente?, ele caminhava por estradas que não constavam em mapa algum, que talvez nem mesmo existissem antes de seus pés tocarem o solo, criando-as no próprio ato de percorrê-las, assim como o tempo talvez só exista quando o nomeamos, quando o dissecamos em horas, minutos, segundos, essa taxonomia ridícula que pretende domesticar o indomesticável, classificar o inclassificável, dar nome ao que transcende a própria linguagem, e não seria isso, pensava ele com um sorriso de ironia que seus lábios finos mal conseguiam conter, a maior das presunções humanas?</p>
+            <!-- Restante do capítulo 2 aqui -->
+            <div class="symbol">*A flor murcha da Cidade das Horas Invertidas*</div>
+        </div>
+
+        <div id="cap3">
+            <h2>Capítulo 3 - Vale da Imutabilidade</h2>
+            <p>Voltando ao início mais uma vez, nosso Relojoeiro reabre as cortinas da oficina com um olhar que agora mistura a curiosidade de um explorador e o cansaço de um velho marinheiro, ou talvez não seja realmente cansaço o que sente, mas aquela peculiar forma de lucidez que chega quando todas as ilusões começam a desmoronar, quando os alicerces que sustentavam sua compreensão do mundo revelam-se tão frágeis quanto casas de papel em uma tempestade...</p>
+            <!-- Restante do capítulo 3 aqui -->
+            <div class="symbol">*O fragmento de rocha do Vale da Imutabilidade*</div>
+        </div>
+
+        <div id="cap4">
+            <h2>Capítulo 4 - Jardim do Tempo Perdido</h2>
+            <p>Voltando mais uma vez ao início, nosso Relojoeiro reabre as cortinas da oficina com um olhar que agora mistura a curiosidade de um explorador e o cansaço de um velho marinheiro, de um navegante que atravessou oceanos de possibilidades sem encontrar terra firme...</p>
+            <!-- Restante do capítulo 4 aqui -->
+            <div class="symbol">*A folha do Jardim do Tempo Perdido*</div>
+        </div>
+
+        <div id="cap5">
+            <h2>Capítulo 5 - Enigma Filosófico do Tempo</h2>
+            <p>Voltando ao início mais uma vez, o Relojoeiro reabre as cortinas da oficina, agora com uma expressão que mistura cansaço e uma determinação quase teimosa, seu rosto iluminado pela luz oblíqua da manhã como um palco sob holofotes amarelados...</p>
+            <!-- Restante do capítulo 5 aqui -->
+            <div class="symbol">*O cristal do Místico*</div>
+        </div>
+
+        <div id="cap6">
+            <h2>Capítulo 6 - Revolução dos Ponteiros</h2>
+            <p>Voltando ao início mais uma vez, o Relojoeiro reabre as cortinas da oficina, agora com uma determinação quase fanática, travessia permanente, terceiras margens cruzando, como se estivesse prestes a enfrentar o próprio Tempo em um duelo de morte — nonada!...</p>
+            <!-- Restante do capítulo 6 aqui -->
+            <div class="symbol">*A engrenagem quebrada da Revolução dos Ponteiros*</div>
+        </div>
+
+        <div id="cap7">
+            <h2>Capítulo 7 - Transcendência do Tempo</h2>
+            <p>Voltando ao início uma última vez, o Relojoeiro reabre as cortinas da oficina, mas as mãos que realizam esse gesto já não lhe parecem próprias, como se pertencessem a outro homem, a outro tempo, a outra existência...</p>
+            <!-- Restante do capítulo 7 aqui -->
+            <p>E assim, sem fim porque nunca realmente começou, sem conclusão porque nunca realmente se desenvolveu, sem despedida porque nunca realmente nos encontramos, nossa história — que é a única história, que é todas as histórias — continua, perpetuamente presente, eternamente atual, infinitamente real no único momento que existe: agora.</p>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Gustavo Mendes. Todos os direitos reservados.</p>
+        </footer>
+    </div>
 </body>
 </html>
